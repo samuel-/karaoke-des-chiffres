@@ -1,21 +1,43 @@
 @font-face {
     font-family: "SevenSegments";
-    src: local(SevenSegments.ttf) format("truetype");
+    src: url("SevenSegment.ttf") format("truetype");
     font-stretch : normal;
     font-weight : normal;
     font-style : normal;
 }
 
-#chiffres{
+body{
+    height: 100vh;
+    margin: 0;
+}
+
+#chiffres-container{
     font-family: "SevenSegments", sans-serif;
-    
-    font-size: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    /* background-color: rgb(200,200,100); */
+    font-size: 250px;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    background-color: rgb(200,200,100);
     padding: 15px;
-    width: 320px;
+    width: 600px;
     height: 200px;
     border: solid 15px grey;
     border-radius: 30px;
+    transform: translate(0, -50%);
+}
+
+#chiffres{
+    position: relative;
+    top: 50%;
+    text-align: center;
+    transform: translate(0, -50%);
+}
+
+.blink {
+    animation: blink 0.2s infinite;
+}
+@keyframes blink { 
+    0% { opacity:0; }
+    50% { opacity:1; } 
+    100% { opacity:0; }
 }
